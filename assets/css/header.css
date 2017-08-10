@@ -1,6 +1,6 @@
 #header{
-	width: 1350px;
-	height: 60px;
+	width: 1550px;
+	height: 92px;
 	background-color: #33333D;
 	position: fixed;
 }
@@ -32,10 +32,10 @@
 
 #header-title{
 	width: 940px;
-	height: 29px;
+	height: 20px;
 	display: block;
-	font-family: Algerian;
-	font-size: 25px;
+	font-family: Arial;
+	font-size: 30px;
 	color: white;
 	padding-left: 10px;
 }
