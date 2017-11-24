@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/container.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/footer.css')
+  body
+    #header
+      #h-left
+        #logo
+      #h-center
+        #header-title Online Judge
+        #menu
+          ul
+            li
+              a(href="../") HOME
+            li
+              a(href="registrar") REGISTRAR
+            li
+              a(href="perfil") PERFIL
+              ul
+                li
+                  a(href="configuracion") CONFIGURACION
+                li
+                  a(href="estadisticas") ESTADISTICAS
+            li
+              a(href="temas") TEMAS
+            li
+              a(href="foro") FORO
+            li
+              a(href="problemas") PROBLEMAS
+              ul
+                li
+                  a(href="problemas") AD-HOC
+                li
+                  a(href="problemas") ESTRUCTURAS
+                li
+                  a(href="problemas") STRINGS
+                li
+                  a(href="problemas") MATEMATICAS
+                li
+                  a(href="problemas") PARADIGMAS
+                li
+                  a(href="problemas") GRAFOS
+                li
+                  a(href="problemas") GEOMETRIA
+            li
+              a(href="envios") ENVIOS
+            li
+              a(href="rank") RANK
+            li
+              a(href="logout") SALIR
+      #h-right
+        #header-login
+          ul
+            li
+              a(href="login") Log in
+    block content

@@ -1,0 +1,25 @@
+extends ../layout
+
+block content
+  head
+    link(rel='stylesheet', href='/stylesheets/users-form.css')
+  #container
+    #content
+      #users-form
+        form(action='http://localhost:3000/pages/registrar' method='post')
+          span REGISTER IN ONLINE JUDGE
+          #input-username
+            label.formulario(for='email') Username
+            input#email(type='text', name='username', autocomplete='off', autofocus='autofocus')
+          #input-email
+            label.formulario(for='email') Email
+            input#email(type='email', name='email', autocomplete='off', autofocus='autofocus')
+          #input-password
+            label.formulario(for='password') Password
+            input#password(type='password', name='password', autocomplete='off')
+          #input-password
+            label.formulario(for='password') Confirm Password
+            input#password(type='password', name='confirm_password', autocomplete='off')
+          input(type='submit', value='Enviar este formulario')
+  #footer
+    center footer

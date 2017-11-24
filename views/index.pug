@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/container.css')
+    link(rel='stylesheet', href='/stylesheets/header.css')
+    link(rel='stylesheet', href='/stylesheets/footer.css')
+  body
+    #header
+      #h-left
+        if isAuthenticated
+          p= 'Hola... ' + user.correo
+        #logo
+      #h-center
+        #header-title Online Judge
+        #menu
+          ul
+            li
+              a(href="/") HOME
+            li
+              a(href="/pages/registrar") REGISTRAR
+            li
+              a(href="/pages/perfil") PERFIL
+              ul
+                li
+                  a(href="/pages/configuracion") CONFIGURACION
+                li
+                  a(href="/pages/estadisticas") ESTADISTICAS
+            li
+              a(href="/pages/temas") TEMAS
+            li
+              a(href="/pages/foro") FORO
+            li
+              a(href="/pages/problemas") PROBLEMAS
+              ul
+                li
+                  a(href="/pages/problemas") AD-HOC
+                li
+                  a(href="/pages/problemas") ESTRUCTURAS
+                li
+                  a(href="/pages/problemas") STRINGS
+                li
+                  a(href="/pages/problemas") MATEMATICAS
+                li
+                  a(href="/pages/problemas") PARADIGMAS
+                li
+                  a(href="/pages/problemas") GRAFOS
+                li
+                  a(href="/pages/problemas") GEOMETRIA
+            li
+              a(href="/pages/envios") ENVIOS
+            li
+              a(href="/pages/rank") RANK
+            li
+              a(href="/pages/logout") SALIR
+      #h-right
+        #header-login
+          ul
+            li
+              a(href="/pages/login") Log in

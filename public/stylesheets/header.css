@@ -1,0 +1,130 @@
+#header{
+	width: 1350px;
+	height: 60px;
+	background-color: #33333D;
+	position: fixed;
+	border-bottom-style: solid;
+	border-bottom-color: orange;
+}
+
+#h-left{
+	width: 200px;
+	height: 60px;
+	float: left;
+}
+
+#h-center{
+	width: 950px;
+	height: 60px;
+	display: inline;
+	float: left;
+}
+
+#h-right{
+	width: 200px;
+	height: 60px;
+	float: left;
+}
+
+#logo{
+	width: 80px;
+	height: 40px;
+	margin: 10 0 0 60;
+}
+
+#header-title{
+	width: 940px;
+	height: 29px;
+	display: block;
+	font-family: Algerian;
+	font-size: 25px;
+	color: white;
+	padding-left: 10px;
+}
+
+#menu{
+	width: 950px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+#menu ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+#menu a{
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 16px;
+	display: block;
+	position: relative;
+	padding: 7px 10px 6px 10px;
+	color: #A6A6A6;
+	font-weight: bold;
+	background-color: #33333D;
+}
+
+#menu > ul > li{
+	float: left;
+}
+
+#menu li ul{
+	display: none;
+	position: absolute;
+	border-top-style: solid;
+	border-top-color: transparent;
+}
+
+#menu a:hover{
+	color: white;
+}
+
+#menu li:hover{
+	border-style: none solid none solid;
+	border-width: 1px;
+	border-color: orange;
+}
+
+#menu li:hover ul{
+	display: block;
+}
+
+#menu li:hover li{
+	border-style: none;
+}
+
+#header-login{
+	width: 200px;
+	height: 30px;
+	margin-top: 20px;
+}
+
+#header-login ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#header-login a{
+	width: 80px;
+	height: 30px;
+	color: #33333D;
+	text-decoration: none;
+	margin-left: 30px;
+	padding: 5px 30px 5px 30px;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 16px;
+	background-color: #828282;
+	border-style: solid;
+	border-radius: 20px;
+	border-color: transparent;
+}
+
+#header-login li a:hover{
+	color: white;
+	background-color: orange;
+}

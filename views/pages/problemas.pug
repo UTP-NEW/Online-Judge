@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  head
+    link(rel='stylesheet', href='/stylesheets/lista-problemas.css')
+  #container
+    #side-bar
+    #content
+      #page-name
+        h1 PROBLEMAS
+      p 'id'  'problema'  'id autor'  'nivel'  'estado'
+      each x in message
+        each y in x
+          tr
+            td
+            a #{y} &nbsp
+        p

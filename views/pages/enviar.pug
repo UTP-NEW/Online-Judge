@@ -1,0 +1,5 @@
+extends ../layout
+
+block content
+  if isAuthenticated
+    p= 'Hola... ' + user.correo
