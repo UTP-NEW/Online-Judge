@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  head
+    link(rel='stylesheet', href='/stylesheets/lista-categorias.css')
+  #container
+    #side-bar
+    #content
+      #page-name
+        h1 CATEGORIAS
+      #category-list
+        ul
+          each x in message
+            li(style="cursor: pointer")
+              span #{x.id}
+              #sad
+                a(href="") #{x.nombre}
+                p #{x.descripcion}
+                b #{x.num_problemas} problemas

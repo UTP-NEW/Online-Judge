@@ -8,10 +8,17 @@ block content
     #content
       #page-name
         h1 PROBLEMAS
-      p 'id'  'problema'  'id autor'  'nivel'  'estado'
-      each x in message
-        each y in x
+      table
+        thead
           tr
-            td
-            a #{y} &nbsp
-        p
+            th id
+            th problema
+            th autor
+            th nivel
+            th estado
+        tbody
+          each x in message
+            tr
+              each y in x
+                td
+                  a #{y} &nbsp

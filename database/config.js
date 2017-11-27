@@ -2,7 +2,7 @@ var config = {
 	host : 'localhost',
 	user : 'root',
 	password : 'password',
-	database : 'TestJudge'
+	database : 'OnlineJudge'
 }
 
 module.exports = config;

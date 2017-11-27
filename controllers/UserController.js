@@ -85,19 +85,42 @@ module.exports = {
 		return res.render('pages/foro');
 	},
 
-	getProblemas : function(req, res, next){
+	getCategorias : function(req, res, next){
 		var config = require('.././database/config');
 		var db = mysql.createConnection(config);
 		db.connect();
-		//tableBody=document.getElementById('tablebody');
-		//var html = 'doctype html';
-		//html +=  'h1 a';
-		db.query('SELECT * FROM problemas', function(err, rows){
+
+		db.query('SELECT * FROM categorias', function(err, rows){
 			if(err) throw err;
 
 			db.end();
 			for(i=0; i<rows.length; i++){
 				console.log(rows[i]);
+			}
+			return res.render('pages/categorias', {
+				message: rows, name: 'name'
+			});
+
+		})
+	},
+
+	getProblemas : function(req, res, next){
+		var config = require('.././database/config');
+		var db = mysql.createConnection(config);
+		db.connect();
+		var nombre_categoria = req.params.id_categoria;
+		var n = req.params.id_lista_problemas;
+		console.log(nombre_categoria);
+		if(n == null)
+		n = 1;
+		console.log(n);
+		var consulta = 'SELECT * FROM problemas WHERE categoria = ?'
+		db.query(consulta, [nombre_categoria], function(err, rows){
+			if(err) throw err;
+			console.log(rows.length);
+			db.end();
+			for(i=(n-1)*20; i<n*20 && i<rows.length; i++){
+				//console.log(rows[i]);
 				//body += rows[i];
 			}
 			return res.render('pages/problemas', {

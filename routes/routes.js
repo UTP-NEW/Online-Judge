@@ -21,7 +21,12 @@ router.get('/pages/enviar', controllers.UserController.getConfiguracion);
 router.get('/pages/envios', controllers.UserController.getEnviar);
 router.get('/pages/estadisticas', controllers.UserController.getEstadisticas);
 router.get('/pages/foro', controllers.UserController.getForo);
-router.get('/pages/problemas', controllers.UserController.getProblemas);
+router.get('/pages/categorias', controllers.UserController.getCategorias);
+router.get('/pages/categorias/:id_categoria', controllers.UserController.getProblemas)
+router.get('/pages/categorias/:id_categoria/:id_lista_problemas', controllers.UserController.getProblemas);
+//router.get('/pages/categorias', controllers.UserController.getCategorias);
+//router.get('/pages/categorias', controllers.UserController.getProblemas);
+//router.get('/pages/problem/:index', controllers.UserController.getProblemas);
 router.get('/pages/rank', controllers.UserController.getRank);
 router.get('/pages/temas', controllers.UserController.getTemas);
 router.get('/pages/login', controllers.UserController.getSignIn);
