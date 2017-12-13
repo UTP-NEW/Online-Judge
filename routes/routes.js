@@ -28,6 +28,7 @@ router.get('/pages/categorias/:id_categoria/:id_lista_problemas', controllers.Us
 //router.get('/pages/categorias', controllers.UserController.getProblemas);
 //router.get('/pages/problem/:index', controllers.UserController.getProblemas);
 router.get('/pages/rank', controllers.UserController.getRank);
+router.get('/pages/rank/:id_lista_rank', controllers.UserController.getRank);
 router.get('/pages/temas', controllers.UserController.getTemas);
 router.get('/pages/login', controllers.UserController.getSignIn);
 

@@ -1,0 +1,49 @@
+#table{
+	background-color: #EDEDED;
+	width: 660px;
+	margin-left: 1px;
+	float: left;
+	border-style: solid;
+	border-radius: 20px 20px 0 0;
+	border-width: 5px;
+}
+
+#list{
+	width: 660px;
+	margin-top: 20px;
+	background-color: yellow;
+	border-style: solid none none none;
+	border-width: 5px;
+}
+
+table{
+	background-color: transparent;
+	width: 660px;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+thead{
+	border-color: inherit;
+	vertical-align: baseline;
+	display: table-header-group;
+	border-collapse: collapse;
+	background-color: blue;
+}
+
+th{
+	background-color: #B2B2B2;
+}
+
+.impar{
+	background-color: orange;
+	text-align: center;
+}
+
+.par{
+	background-color: yellow;
+	text-align: center;
+}
+
+
+

@@ -1,3 +1,48 @@
 extends ../layout
 
 block content
+  head
+    link(rel='stylesheet', href='/stylesheets/listados.css')
+  #container
+    #side-bar
+    #content
+      #page-name
+        h1 CATEGORIAS
+      #table
+        #list
+          #element
+            table
+              thead
+                tr
+                  th pos
+                  th usuario
+                  th resueltos
+                  th intentados
+                  th envios
+                  th estado
+              tbody
+                - for (var i=1; i<message.length; i++)
+                    if i%2 == 0
+                      tr.par
+                        td
+                          a #{message[i].num}
+                        td
+                          a #{message[i].username}
+                        td
+                          a #{message[i].num_resueltos}
+                        td
+                          a #{message[i].num_intentados}
+                        td
+                          a #{message[i].num_envios}
+                    else
+                      tr.impar
+                        td
+                          a #{message[i].num}
+                        td
+                          a #{message[i].username}
+                        td
+                          a #{message[i].num_resueltos}
+                        td
+                          a #{message[i].num_intentados}
+                        td
+                          a #{message[i].num_envios}

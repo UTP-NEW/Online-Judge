@@ -114,8 +114,7 @@ module.exports = {
 		if(n == null)
 		n = 1;
 		console.log(n);
-		var consulta = 'SELECT * FROM problemas WHERE categoria = ?'
-		db.query(consulta, [nombre_categoria], function(err, rows){
+		db.query('SELECT * FROM problemas WHERE categoria = ?', [nombre_categoria], function(err, rows){
 			if(err) throw err;
 			console.log(rows.length);
 			db.end();
@@ -132,7 +131,34 @@ module.exports = {
 	},
 
 	getRank : function(req, res, next){
-		return res.render('pages/rank');
+		var config = require('.././database/config');
+		var db = mysql.createConnection(config);
+		db.connect();
+		var n = req.params.id_lista_rank;
+		if(n == null)
+		n=1;
+		var ans = []
+		db.query('SELECT username, num_resueltos, num_intentados, num_envios FROM usuarios ORDER BY num_resueltos DESC', function(err, rows){
+			if(err) throw err;
+			ans.push(0);
+			for(i=(n-1)*25; i<(n*25) && i<rows.length; i++){
+				console.log(i);
+				rows[i].num= i+1;
+				ans.push(rows[i]);
+			//	console.log(ans[i].username);
+			}
+			console.log(ans);
+
+			db.end();
+			/*
+			for(i=0; i<rows.length; i++){
+				console.log(rows[i]);
+			}*/
+			return res.render('pages/rank', {
+				message: ans, name: 'name'
+			});
+
+		})
 	},
 
 	getTemas : function(req, res, next){
