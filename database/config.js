@@ -1,7 +1,7 @@
 var config = {
 	host : 'localhost',
 	user : 'root',
-	password : '98011960',
+	password : 'password',
 	database : 'TestJudge'
 }
 
